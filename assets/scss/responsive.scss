@@ -1,0 +1,368 @@
+/** Tablet Portrait View **/
+@media all and(min-width:768px){
+    /** Content Area Start **/
+    .content{
+        .container{
+            .explore-wrapper{
+                .explore{
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+    /** Content Area End **/
+    /** Membership Section Start **/
+    .membership{
+        .container{
+            .membership-wrapper{
+                @include d-flex;
+                @include flex-wrap;
+                .benefits{
+                    margin: 0 20px 0 0;
+                    width: calc(33.33% - 20px);
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    /** Membership Section End **/
+    /**  Workouts Section Start **/
+    .workouts{
+        .container{
+            p{
+                width: 580px;
+                margin: 0 auto 28px;
+            }
+            .workouts-wrapper{
+                margin-bottom: 30px;
+                .workouts-wrap{
+                    width: calc(33.33% - 20px);
+                    margin-right: 20px;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    .workouts-block{
+                        .workouts-image{
+                            .weeks-text{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /**  Workouts Section End **/
+    /** Services Section Start **/
+    .services{
+        text-align:$align-center;
+        .container{
+            max-width: 880px;
+            .services-wrapper{
+                @include align-items-center;
+                max-width: 714px;
+                margin: 0 auto 28px;
+                .services-image{
+                    &:first-child{
+                        margin: 0 60px 0 0;
+                    }
+                    &:nth-child(2){
+                        margin:0 60px 0 0;
+                    }
+                    &:nth-child(3){
+                        margin: 0 60px 0 0;
+                    }
+                    &:nth-child(4){
+                        margin:0 60px 0 0;
+                    }
+                    &:nth-child(5){
+                        margin: 0 60px 0 0;
+                    }
+                    &:last-child{
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+    /** Services Section End **/
+    /** Course Section Start **/
+    .course{
+        background: url("../images/course-time.png") center top/cover no-repeat;
+        display: block;
+        color: $white;
+        text-align: $align-center;
+        padding: 60px 0 40px;
+        .container{
+            max-width: 690px;
+            padding: 0;
+            .digit{
+                display: block;
+                font-family: $tertiary-font;
+                font-weight: $fw-black;
+                @include fontsize(30px);
+            }
+            h2{
+                color:$white;
+                margin-bottom: 10px;
+            }
+            p{
+                color:$white;
+                @include fontsize(14px);
+                margin-bottom: 15px;
+                &:first-of-type{
+                    margin-bottom: 20px;
+                }
+            }
+            .pranayama{
+                display: block;
+                padding: 17px 36px;
+                border: 2px solid #fff;
+                width: 360px;
+                margin: 0 auto 20px;
+                @include fontsize(16px);
+            }
+            .btn{
+                background: $white;
+                color:$red-dark;
+                @include fontsize(16px);
+                font-family: $secondary-font;
+                font-weight: $fw-black;
+            }
+        }
+    }
+    /** Course Section End **/
+}
+/** Tablet Landscape View **/
+@media all and(min-width:1024px){
+    /** Membership Section Start **/
+    .membership{
+        padding: 63px 0;
+        .container{
+            padding: 0;
+            h3{
+                @include fontsize(30px);
+            }
+        }
+    }
+    /** Membership Section End **/
+    /**  Workouts Section Start **/
+    .workouts{
+        .container{
+            padding: 0;
+            h3{
+                @include fontsize(32px);
+            }
+        }
+    }
+    /**  Workouts Section End **/
+    /** Services Section Start **/
+    .services{
+        .container{
+            padding: 0;
+        }
+    }
+    /** Services Section End **/
+}
+/** Laptop View **/
+@media all and(min-width:1280px){
+    /** Content Area Start **/
+    .content{
+        .container{
+            padding: 0;
+            h2{
+                @include fontsize(35px);
+                margin-bottom: 43px;
+            }
+            .title{
+                @include fontsize(20px);
+            }
+        }
+    }
+    /** Content Area End **/
+    /** Workouts Section Start **/
+    .workouts{
+        background-color: $white;
+        .container{
+            .workouts-wrapper{
+                position: relative;
+                box-shadow: rgb(0 0 0 / 4%) 0 12px 13px;
+                .slick-next{
+                    text-indent: 0;
+                    content: "";
+                    @include abs($top:153px, $right:0);
+                    background: url("../images/arrow.png") center top no-repeat;
+                    width: 41px;
+                    height: 52px;
+                    color: transparent;
+                }
+            }
+        }
+    }
+    /** Workouts Section End **/
+     /** Services Section Start **/
+     .services{
+         padding: 86px 0 102px;
+     }
+    /** Services Section End **/
+    /** Course Section Start **/
+    .course{
+        padding: 101px 0 86px;
+        .container{
+            .digit{
+                @include fontsize(42px);
+            }
+            h2{
+                @include fontsize(42px);
+                margin-bottom: 27px;
+            }
+            p{
+                @include fontsize(18px);
+                letter-spacing: -0.2px;
+                margin-bottom: 25px;
+                &:first-of-type{
+                    margin-bottom: 30px;
+                }
+            }
+            .pranayama{
+                @include fontsize(22px);
+                width: 462px;
+                margin-bottom: 51px;
+            }
+            .btn{
+                padding: 12px 39px;
+            }
+        }
+    }
+     /** Course Section End **/
+}
+/** Desktop View **/
+@media all and(min-width:1400px){
+
+}
+/** Media-Query 1600px **/
+@media all and(min-width:1600px){
+    /** Content Area Start **/
+    .content{
+        padding: 33px 0 58px;
+        .container{
+            h2{
+                @include fontsize(42px);
+                letter-spacing: -0.8px;
+                word-spacing: 5px;
+                margin-bottom: 54px;
+                padding-left: 9px;
+            }
+        }
+    }
+    /** Content Area End **/
+    /** Membership Section Start **/
+    .membership{
+        padding: 72px 0 85px;
+        .container{
+            h3{
+                margin-bottom: 55px;
+            }
+            .membership-wrapper{
+                .benefits{
+                    margin: 0 45px 0 0;
+                    width: calc(33.33% - 30px);
+                    &:last-child{
+                        .benefits-text{
+                            padding: 0;
+                            margin-bottom: 37px;
+                        }
+                    }
+                    .benefits-text{
+                        margin-bottom: 37px;
+                        letter-spacing: -0.2px;
+                    }
+                }
+            }
+        }
+    }
+    /** Membership Section End **/
+    /** Workouts Section Start **/
+    .workouts{
+        padding: 67px 0 80px;
+        .container{
+            h3{
+                @include fontsize(42px);
+                margin: 0 0 24px 11px;
+            }
+            p{
+                line-height: 1.56;
+            }
+            .workouts-wrapper{
+                margin-left: 15px;
+                .workouts-wrap{
+                    .workouts-block{
+                        .workouts-image{
+                            .workouts-text{
+                                @include fontsize(12px);
+                                left: 19px;
+                            }
+                        }
+                    }
+                    .workouts-content{
+                        padding: 13px 30px 17px 18px;
+                        .level{
+                            margin-bottom: 7px;
+                            .level-class{
+                                letter-spacing: 1.6px;
+                            }
+                        }
+                        .type{
+                            margin-bottom: 3px;
+                        }
+                        .time-interval{
+                            margin-bottom: 10px;
+                        }
+                        .clients{
+                            .client-content{
+                                margin-top: 2px;
+                            }
+                        }
+                    }
+                }
+            }
+            .btn{
+                padding: 14px 52px;
+            }
+        }
+    }
+    /** Workouts Section End **/
+    /** Services Section Start **/
+    .services{
+        .container{
+            .services-wrapper{
+                .services-image{
+                    &:first-child{
+                        margin: 0 71px 0 2px;
+                    }
+                    &:nth-child(2){
+                        margin-right: 66px;
+                    }
+                    &:nth-child(3){
+                        margin-right: 69px;
+                    }
+                    &:nth-child(4){
+                        margin-right: 71px;
+                    }
+                    &:nth-child(5){
+                        margin-right: 69px;
+                    }
+                }
+            }
+            p{
+                letter-spacing: -0.1px;
+            }
+        }
+    }
+    /** Workouts Section End **/
+    /** Course Section Start **/
+
+    /** Course Section End **/
+}

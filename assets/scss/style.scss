@@ -1,0 +1,381 @@
+/** Content Area Start **/
+.content{
+    overflow: hidden;
+    padding:54px 0 37px;
+    .container{
+        max-width: 1219px;
+        h2{
+            text-align: $align-center;
+        }
+        .explore-wrapper{
+            .explore{
+                text-align: center;
+                .icon-yoga{
+                    background-position:-2px -167px;
+	                width: 58px;
+	                height: 44px;
+                    margin-bottom: 30px;
+                }
+                .title{
+                    font-family: $primary-fontfamily;
+                    font-weight:$fw-bold;
+                    @include fontsize(18px);
+                    color: $black-secondary;
+                    display: block;
+                }
+                .icon-meditation{
+                    background-position: -10px -230px;
+	                width: 42px;
+	                height: 42px;
+                    margin-bottom: 30px;
+                }
+                .icon-pilates{
+                    background-position: -10px -295px;
+	                width: 57px;
+	                height: 33px;
+                    margin-bottom: 30px;
+                }
+                .icon-mindfulness{
+                    background-position: -76px -13px;
+	                width: 37px;
+	                height: 29px;
+                    margin-bottom: 30px;
+                }
+                .icon-nutrition{
+                    background-position: -76px -63px;
+	                width: 32px;
+	                height: 40px;
+                    margin-bottom: 30px;
+                }
+                .icon-stress{
+                    background-position:-76px -132px;
+	                width: 44px;
+	                height: 40px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}
+/** Content Area End **/
+/** Membership Section Start **/
+.membership{
+    padding: 53px 0 51px;
+    background-color: $black-secondary;
+    text-align: $align-center;
+    .container{
+        .membership-wrapper{
+            .benefits{
+                margin-bottom: 45px;
+                &:last-child{
+                    margin-bottom: 0;
+                    .benefits-text{
+                        padding: 0 31px 0 36px;
+                        margin-bottom: 24px;
+                    }
+                }
+                .user-profile{
+                    width: 66px;
+                    margin: 0 auto 25px;
+                    img{
+                        display: block;
+                        width: 100%;
+                    }
+                }
+                .benefits-text{
+                    display: block;
+                    @include fontsize(13px);
+                    color: $red-dark;
+                    margin-bottom: 28px;
+                    font-family:$primary-fontfamily;
+                    font-weight: $fw-regular;
+                    letter-spacing: 0.1px;
+                    word-spacing: -1px;
+                }
+                p{
+                    color:$gray;
+                    @include fontsize(18px);
+                    padding: 0 13px 0 16px;
+                    line-height: 1.65;
+                }
+            }
+        }
+    }
+}
+/** Membership Section End **/
+/**  Workouts Section Start **/
+.workouts{
+    padding:53px 0 60px;
+    text-align: $align-center;
+    .container{
+        h3{
+            color: $black-secondary;
+            margin-bottom: 17px;
+        }
+        p{
+            color: $gray;
+            line-height: 1.43;
+            text-indent: -2px;
+        }
+        .workouts-wrapper{
+            box-shadow: rgb(0 0 0 / 4%) 0 -1px 6px;
+            margin-bottom: 18px;
+            overflow: hidden;
+            border-radius: 12px;
+            background-color: $white-primary;
+            .slick-prev, .slick-next{
+                text-indent: -9999px;
+            }
+            .workouts-wrap{
+                .workouts-block{
+                    .workouts-image{
+                        position: relative;
+                        img{
+                            display: block;
+                            width: 100%;
+                        }
+                    }
+                    .workouts-text{
+                        @include abs($top:18px, $left:22px);
+                        color: $white;
+                        font-family: $primary-fontfamily;
+                        font-weight: $fw-bold;
+                        @include fontsize(10.3px);
+                        display: block;
+                        text-transform: uppercase;
+                        letter-spacing: 1.3px;
+                    }
+                    .weeks-text{
+                        @include abs($top:160px, $left:8px);
+                        background-color: $white;
+                        padding: 4px 9px;
+                        border-radius: 10px;
+                        @include fontsize(12.81px);
+                        color:$black-secondary;
+                        font-weight: $fw-bold;
+                        font-family: $primary-fontfamily;
+                        letter-spacing: 2px;
+                    }
+                }
+                .workouts-content{
+                    text-align: $align-left;
+                    padding: 20px 18px 10px 18px;
+                    background-color: $white;
+                    .level{
+                        color:$gray;
+                        font-family: $primary-fontfamily;
+                        @include d-flex;
+                        @include justify-content-between;
+                        @include align-items-center;
+                        margin-bottom: 13px;
+                        .level-class{
+                            @include fontsize(12px);
+                            text-transform: uppercase;
+                        }
+                        .time-level{
+                            @include fontsize(13px);
+                        }
+                    }
+                    .type{
+                        display: block;
+                        font-family: $primary-fontfamily;
+                        font-weight: $fw-regular;
+                        @include fontsize(16px);
+                        color: $black-secondary;
+                        margin-bottom: 5px;
+                    }
+                    .time-interval{
+                        display: block;
+                        @include fontsize(16px);
+                        color: $gray;
+                        margin-bottom: 14px;
+                    }
+                    .clients{
+                        @include d-flex;
+                        @include align-items-center;
+                        .clients-image{
+                            width: 29px;
+                            margin-right:12px;
+                            img{
+                                display: block;
+                                width: 100%;
+                            }
+                        }
+                        .client-content{
+                            display: block;
+                            @include fontsize(12px);
+                            color:$gray;
+                        }
+                    }
+                }
+            }
+        }
+        .btn{
+            color: $white;
+            @include fontsize(16px);
+            font-family: $secondary-font;
+            font-weight: $fw-black;
+            padding: 11px 52px;
+        }
+    }
+}
+/** Workouts Section End **/
+/** Benefits Section Start **/
+.services{
+    background-color: $blue;
+    padding: 57px 0 59px;
+    position: relative;
+    &::after{
+        @include abs($top:0, $left:0, $right:0);
+        margin:0 auto;
+        content: "";
+        width: 0; 
+        height: 0; 
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 25px solid $white;
+    }
+    .container{
+        .services-wrapper{
+            @include d-flex;
+            @include flex-wrap;
+            @include justify-content-start;
+            @include align-items-start;
+            margin-bottom: 20px;
+            .services-image{
+                // width: calc(30% - 30px);
+                margin-right: 45px;
+                margin-bottom: 20px;
+                img{
+                    width: 100%;
+                    display: block;
+                }
+                &:first-child{
+                    margin: 0 46px 0 23px;
+                }
+                &:nth-child(2){
+                    margin-right: 44px;
+                   
+                }
+                &:nth-child(3n){
+                    margin-right: 0;
+                }
+                &:nth-child(4){
+                    margin: 14px 56px 0 0;
+                }
+                &:nth-child(5){
+                    margin: 0 60px 0 0;
+                }
+                &:last-child{
+                    margin-top: 9px;
+                }
+            }
+        }
+        p{
+            color:$white;
+            text-align: $align-center;
+            line-height: 1.66;
+        }
+    }
+}
+/** Benefits Section End **/
+/** Course Section Start **/
+.mob-hide{
+    display: none;
+}
+/** Course Section End **/
+/** Program Section Start **/
+.program{
+    padding: 48px 0 60px;
+    text-align: $align-center;
+    .container{
+        h3{
+            color: $black-secondary;
+            text-transform: none;
+            line-height: 1.35;
+            margin-bottom: 16px;
+        }
+        p{
+            color: $gray;
+            line-height: 1.65;
+            margin-bottom: 23px;
+        }
+        .program-wrapper{
+            overflow: auto;
+            white-space: nowrap;
+            margin-bottom: 5px;
+            .program-image{
+                display: inline-block;
+                position: relative;
+                img{
+                    display: block;
+                    width: 100%;
+                }
+                .program-content{
+                    @include abs($top:80px, $left:18px);
+                    text-align: $align-left;
+                    .program-course{
+                        display: block;
+                        color: $white;
+                        @include fontsize(12px);
+                        font-weight: $fw-bold;
+                        font-family: $primary-fontfamily;
+                    }
+                    p{
+                        @include fontsize(12px);
+                        color: $white;
+                        margin-bottom: 10px;
+                        .sub-head{
+                            display: block;
+                        }
+                    }
+                    .chapter-wrapper{
+                        @include d-flex;
+                        @include align-items-center;
+                        border-radius: 10px;
+                        .clients{
+                            @include d-flex;
+                            .clients-image{
+                                width: 18px;
+                                margin-right: 15px;
+                                img{
+                                    display: block;
+                                    width: 100%;
+                                }
+                            }
+                            .client-content{
+                                color: $white;
+                                @include fontsize(12px);
+                                font-family: $secondary-font;
+                                font-weight: $fw-regular;
+                                display: block;
+                            }
+                        }
+                        .chapter{
+                            padding: 8px 5px;
+                            background-color: $white;
+                            .chapter-no{
+                                display: block;
+                                text-align: $align-center;
+                                @include fontsize(20.08px);
+                            }
+                            .chapter-name{
+                                font-family: $secondary-font;
+                                @include fontsize(9px);
+                                color:$gray;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .btn{
+            color: $white;
+            @include fontsize(16px);
+            font-family: $secondary-font;
+            font-weight: $fw-black;
+            padding: 10px 45px;
+        }
+    }
+}
+/** Program Section End **/

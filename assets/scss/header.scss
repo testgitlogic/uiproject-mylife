@@ -1,0 +1,311 @@
+.header{
+    position: relative;
+    .header-block{
+        .header-logo{
+            @include abs($top:50px, $left:60px);
+            width:155px;
+            img{
+                display: block;
+                width: 100%;
+            }
+        }
+        .header-wrapper{
+            .primary-header{
+                background: -webkit-linear-gradient(left, #e83d4d 0%,#453287 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to right, #e83d4d 0%,#453287 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                .container{
+                    max-width: 1184px;
+                    .digital{
+                        @include d-flex;
+                        li{
+                            a{
+                                color:$white;
+                                @include fontsize(16px);
+                                font-weight: $fw-bold;
+                                padding: 10px 20px;
+                                &:hover{
+                                    background-color: $white;
+                                    color: $black;
+                                }
+                            }
+                        }
+                    }
+                    .mob-hide{
+                        display: none;
+                    }
+                }
+            }
+            .secondary-header{
+                padding: 17px 0;
+                position: relative;
+                .container{
+                    @include d-flex;
+                    @include justify-content-between;
+                    @include align-items-center;
+                    max-width: 1011px;
+                    .navigation{
+                        display: none;
+                        background-color:$red-secondary;
+                        @include abs($top:100%, $left:0);
+                        width: 100%;
+                        padding: 20px 0;
+                        text-align: $align-center;
+                        .nav-menu{
+                            li{
+                                margin-bottom: 10px;
+                                &:last-child{
+                                    margin-bottom: 0;
+                                }
+                                a{
+                                    font-family: 'Lato', sans-serif;
+                                    font-weight: $fw-regular;
+                                    @include fontsize(14.5px);
+                                    color:$black-secondary;
+                                    text-transform: uppercase;
+                                    transition: all 0.5s;
+                                    &:hover{
+                                        color:$red-dark;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .dashboard-wrapper{
+                        @include d-flex;
+                        @include align-items-center;
+                        .user-wrapper{
+                            margin-right: 22px;
+                            .icon-user{
+                                background-position:-13px -13px;
+                                width: 22px;
+                                height: 22px;
+                                position: relative;
+                            }
+                            .user-menu{
+                                display: none;
+                                @include abs($top:100%, $right:20px);
+                                .btn{
+                                    box-shadow: 2px 1000px 1px #fff inset;
+                                }
+                                .signup{
+                                    background: -webkit-linear-gradient(left, #e83d4d 0%,#453287 100%); /* Chrome10-25,Safari5.1-6 */
+                                    background: linear-gradient(to right, #e83d4d 0%,#453287 100%);
+                                    border:none;
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                        .icon-cart{
+                            background-position: -13px -125px;
+	                        width: 35px;
+	                        height: 27px;
+                        }
+                    }
+                    .mob-menu{
+                        display: block;
+                        width: 21px;
+                        .menu-bar{
+                            display: block;
+                            width: 100%;
+                            background-color: $black-primary;
+                            height: 3px;
+                            margin-bottom: 7px;
+                            &:last-child{
+                                margin-bottom: 0;
+                            }
+                            &:nth-child(2){
+                                width: 28px;
+                            }
+                        }
+                    }
+                   
+                }
+            }
+        }
+    }
+}
+/*tablet portrait view */
+@media all and(min-width:768px){
+    .header{
+        .header-block{
+            @include d-flex;
+            @include align-items-start;
+            @include justify-content-between;
+            padding-left:10px;
+            .header-logo{
+                position: static;
+                margin-top: 16px;
+            }
+            .header-wrapper{
+                width: calc(100% - 156px);
+                .primary-header{
+                    .container{
+                        @include d-flex;
+                        @include justify-content-between;
+                        padding: 0;
+                        .mob-hide{
+                            @include d-flex;
+                        }
+                    }
+                }
+                .secondary-header{
+                    padding: 0 15px 15px;
+                    .container{
+                        padding: 0;
+                        @include align-items-center;
+                        .navigation{
+                            display: block;
+                            position: static;
+                            background-color: transparent;
+                            padding: 0;
+                            margin-top: 18px;
+                            .nav-menu{
+                                @include d-flex;
+                                li{
+                                    margin: 0 8px 0 0;
+                                    &:last-child{
+                                        margin-right: 0;
+                                    }
+                                    a{
+                                        padding: 0;
+                                        @include fontsize(13px);
+                                    }
+                                }
+                            }
+                        }
+                        .dashboard-wrapper{
+                            @include align-items-center;
+                            width: 46%;
+                            .user-wrapper{
+                                .icon-user{
+                                    display: none;
+                                }
+                                .user-menu{
+                                    @include d-flex;
+                                    position: static;
+                                    .icon-search{
+                                        background-position: -13px -92px;
+	                                    width: 18px;
+	                                    height: 20px;
+                                        margin-right: 10px;
+                                    }
+                                    .btn{
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                        .mob-menu{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/** tablet landscape view **/
+@media all and (min-width:1024px){
+    .header{
+        .header-block{
+            .header-logo{
+                width: 250px;
+            }
+            .header-wrapper{
+                width:calc(100% - 290px);
+                .secondary-header{
+                    padding: 0 25px 25px;
+                    .container{
+                        .navigation{
+                            .nav-menu{
+                                li{
+                                    margin-right: 20px;
+                                    a{
+                                        @include fontsize(14.5px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/** laptop view **/
+@media all and (min-width:1280px){
+    .header{
+        .header-block{
+            .header-logo{
+                width: 310px;
+            }
+            .header-wrapper{
+                width:calc(100% - 320px);
+                .secondary-header{
+                    padding: 0 30px 20px 99px;
+                }
+            }
+        }
+    }
+}
+/** desktop view **/
+@media all and (min-width:1400px){
+
+}
+/** media-query 1600 **/
+@media all and (min-width:1600px){
+    .header{
+        .header-block{
+            padding-left: 30px;
+            .header-wrapper{
+                .primary-header{
+                    margin-bottom: 7px;
+                    .container{
+                        .digital{
+                            li{
+                                a{
+                                    padding: 8px 76px;
+                                }
+                            }
+                        }
+                        .partner{
+                            li{
+                                a{
+                                    padding: 8px 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .secondary-header{
+                    padding: 0 31px 18px 200px;
+                    .container{
+                        .navigation{
+                            .nav-menu{
+                                li{
+                                    margin-right: 39px;
+                                }
+                            }
+                        }
+                        .dashboard-wrapper{
+                            .user-wrapper{
+                                margin-right: 18px;
+                                .user-menu{
+                                    .icon-search{
+                                        margin-right: 27px;
+                                    }
+                                    .btn{
+                                        padding: 5px 30px;
+                                    }
+                                    .signup{
+                                        padding: 9px 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
